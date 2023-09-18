@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useEffect, useRef } from 'react'
+import { Suspense, createContext, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { ThemeProvider, useTheme } from 'next-themes'
 
@@ -45,11 +45,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
   let previousPathname = usePrevious(pathname)
 
   return (
-    <AppContext.Provider value={{ previousPathname }}>
-      <ThemeProvider attribute="class" disableTransitionOnChange>
-        <ThemeWatcher />
-        {children}
-      </ThemeProvider>
-    </AppContext.Provider>
+    <Suspense>
+      <AppContext.Provider value={{ previousPathname }}>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
+          <ThemeWatcher />
+          {children}
+        </ThemeProvider>
+      </AppContext.Provider>
+    </Suspense>
   )
 }
