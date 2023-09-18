@@ -10,7 +10,6 @@ import { type ArticleWithSlug } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  console.log('testing')
   return (
     <svg
       viewBox="0 0 24 24"

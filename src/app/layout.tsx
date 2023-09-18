@@ -18,19 +18,19 @@ export default async function RootLayout({
   const headersList = headers()
 
   const fullUrl = headersList.get('referer') || ''
-
+  console.log(fullUrl)
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="h-full bg-zinc-50 dark:bg-black">
-        <Providers>
-          {fullUrl.includes('admin') ? (
-            children
-          ) : (
-            <div className="flex w-full">
-              <Layout>{children}</Layout>
-            </div>
-          )}
-        </Providers>
+        {/* <Providers> */}
+        {fullUrl.includes('admin') ? (
+          children
+        ) : (
+          <div className="flex w-full">
+            <Layout>{children}</Layout>
+          </div>
+        )}
+        {/* </Providers> */}
       </body>
     </html>
   )
