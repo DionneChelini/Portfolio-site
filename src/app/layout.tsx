@@ -10,7 +10,7 @@ export async function generateMetadata() {
     description: homePage[0].description,
   }
 }
-
+console.log('hey')
 export default async function RootLayout({
   children,
 }: {
