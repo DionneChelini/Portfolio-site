@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { getAboutPage } from '@/sanity/queries'
+import { getAbout } from '@/sanity/queries'
 import { Container } from '@/components/Container'
 import { getHomePage } from '@/sanity/queries'
 import SocialLink from '@/components/SocialLinks'
@@ -23,9 +23,9 @@ export async function generateMetadata() {
 }
 
 export default async function About() {
-  const about = await getAboutPage()
+  const about = await getAbout()
   const homePageData = await getHomePage()
-
+  console.log(about[0])
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">

@@ -1,5 +1,3 @@
-'use client'
-
 import { SimpleLayout } from '@/components/SimpleLayout'
 import Link from 'next/link'
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {

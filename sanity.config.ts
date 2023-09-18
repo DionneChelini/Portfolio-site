@@ -23,7 +23,7 @@ import structure from './structure'
 
 //config
 const config = defineConfig({
-  projectId: 'd0w6yb0l',
+  projectId: 'm9etpk3l',
   dataset: 'production',
   title: 'My Portfolio Site',
   apiVersion: '2023-03-04',

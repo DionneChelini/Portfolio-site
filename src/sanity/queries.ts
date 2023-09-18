@@ -6,9 +6,9 @@ export async function getHomePage() {
   )
 }
 
-export async function getAboutPage() {
+export async function getAbout() {
   return client.fetch(
-    '*[_type == "about" || _type == "home"] {accounts, aboutProfile,heading, image {asset -> {_id,url}}, aboutProfile[] {_type,children }}',
+    '*[_type == "about"] {image {asset -> {_id,url}}, heading,  aboutProfile[] {_type,children }}',
   )
 }
 
