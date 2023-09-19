@@ -18,7 +18,7 @@ export default async function RootLayout({
   const headersList = headers()
 
   const fullUrl = headersList.get('x-invoke-path') || ''
-
+  console.log(fullUrl)
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="h-full bg-zinc-50 dark:bg-black">
