@@ -70,6 +70,7 @@ function Role({ role }: { role: any }) {
           width={100}
           height={100}
           className="h-7 w-7"
+          unoptimized
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
