@@ -28,6 +28,7 @@ const config = defineConfig({
   title: 'My Portfolio Site',
   apiVersion: '2023-03-04',
   basePath: '/admin',
+  useCdn: false,
   plugins: [deskTool({ structure }), visionTool(), markdownSchema()],
   schema: {
     types: [
