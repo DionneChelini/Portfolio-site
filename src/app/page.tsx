@@ -70,7 +70,6 @@ function Role({ role }: { role: any }) {
           width={100}
           height={100}
           className="h-7 w-7"
-          unoptimized
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -97,7 +96,6 @@ function Role({ role }: { role: any }) {
 }
 
 function Resume({ data }: any) {
-  console.log(data)
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
