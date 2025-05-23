@@ -7,8 +7,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   reactStrictMode: false,
   trailingSlash: true,
-  assetPrefix: isProd ? '/Portfolio-site/' : '',
-  basePath: isProd ? '/Portfolio-site' : '',
+  assetPrefix: isProd ? '/.' : '',
+  basePath: isProd ? '/.' : '',
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
