@@ -3,13 +3,8 @@ import nextMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
 
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
-  reactStrictMode: false,
-  trailingSlash: true,
-  assetPrefix: isProd ? '/.' : '',
-  basePath: isProd ? '/.' : '',
-  output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
     domains: ['cdn.sanity.io'],

@@ -15,21 +15,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const headersList = headers()
-
-  const fullUrl = headersList.get('x-invoke-path') || ''
-
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="h-full bg-zinc-50 dark:bg-black">
+      <body className="h-full bg-zinc-50">
         <Providers>
-          {fullUrl.includes('admin') ? (
-            children
-          ) : (
-            <div className="flex w-full">
-              <Layout>{children}</Layout>
-            </div>
-          )}
+          <div className="flex w-full">
+            <Layout>{children}</Layout>
+          </div>
         </Providers>
       </body>
     </html>
